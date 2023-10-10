@@ -66,11 +66,15 @@ EX)
 |**Mentor**|
 |:---------:|
 |<img src="https://avatars.githubusercontent.com/u/52882799?s=70&v=4" width="256" />|
-|[박동민](https://github.com/chattymin)|  
+|[박동민(19)](https://github.com/chattymin)|  
 <br>
 
-|Mentee|
-|:---------:|
-|<img src="???" width="128" />|
-|[???](???)|
+|Mentee|Mentee|Mentee|
+|:---------:|:---------:|:---------:|
+|<img src="https://github.com/KGU-C-Lab/C-Lab_23-2_AndroidStudy/assets/52882799/7a6bf4a6-81f2-4a01-999b-15c7f8d2c757" width="128" /> | <img src="https://github.com/KGU-C-Lab/C-Lab_23-2_AndroidStudy/assets/52882799/c8c878cf-9a11-4dfe-a820-b26e99d539cc" width="128" /> | <img src="https://github.com/KGU-C-Lab/C-Lab_23-2_AndroidStudy/assets/52882799/bda6c642-5750-4661-8b13-1996912edb6f" width="128" />|
+|[김정은(22)](https://github.com/Jeong-Ag) | [권지윤(22)](https://github.com/jiyoxn) | [구수민(22)](https://github.com/tn-als)|   
 
+|Mentee|Mentee|Mentee|
+|:---------:|:---------:|:---------:|
+|<img src="https://github.com/KGU-C-Lab/C-Lab_23-2_AndroidStudy/assets/52882799/5edcd779-8bb4-4de5-9e13-a503245a30c1" width="128" /> | <img src="https://github.com/KGU-C-Lab/C-Lab_23-2_AndroidStudy/assets/52882799/69657e0d-8d5a-4916-af40-6b7a8c2e1960" width="128" /> | <img src="https://github.com/KGU-C-Lab/C-Lab_23-2_AndroidStudy/assets/52882799/4a026b7a-e61f-42c9-a995-dd6ec98320a9" width="128" />|
+|[전민주(22)](https://github.com/mingmingmon) | [권시훈(22)](https://github.com/kanai1) | [정의민(20)](https://github.com/Mariojung123)|
