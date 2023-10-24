@@ -11,7 +11,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/activity_main_tvSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
@@ -20,8 +20,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/activity_main_tvID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_etID"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_etID" />
+
     <EditText
-        android:id="@+id/editTextID"
+        android:id="@+id/activity_main_etID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -30,18 +38,18 @@
         android:hint="아이디를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_tvSignup" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/activity_main_tvPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
-        app:layout_constraintBottom_toTopOf="@+id/editTextID"
-        app:layout_constraintStart_toStartOf="@+id/editTextID" />
+        android:text="비밀번호"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_etPassword"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_etPassword" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/activity_main_etPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -50,18 +58,18 @@
         android:hint="비밀번호를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_etID" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/activity_main_tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비밀번호"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextPassword" />
+        android:text="닉네임"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_etName"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_etName" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/activity_main_etName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -70,18 +78,18 @@
         android:hint="닉네임를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_etPassword" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/activity_main_tvMBTI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="닉네임"
-        app:layout_constraintBottom_toTopOf="@+id/editTextName"
-        app:layout_constraintStart_toStartOf="@+id/editTextName" />
+        android:text="MBTI"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_etMBTI"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_etMBTI" />
 
     <EditText
-        android:id="@+id/editTextMBTI"
+        android:id="@+id/activity_main_etMBTI"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -90,18 +98,18 @@
         android:hint="MBTI를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_etName" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/activity_main_tvAboutMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MBTI"
-        app:layout_constraintBottom_toTopOf="@+id/editTextMBTI"
-        app:layout_constraintStart_toStartOf="@+id/editTextMBTI" />
+        android:text="About Me"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_etAboutMe"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_etAboutMe" />
 
     <EditText
-        android:id="@+id/editTextAboutMe"
+        android:id="@+id/activity_main_etAboutMe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -110,15 +118,7 @@
         android:hint="한줄 자기소개를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMBTI" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Me"
-        app:layout_constraintBottom_toTopOf="@+id/editTextAboutMe"
-        app:layout_constraintStart_toStartOf="@+id/editTextAboutMe" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_etMBTI" />
 
     <Button
         android:id="@+id/button"
