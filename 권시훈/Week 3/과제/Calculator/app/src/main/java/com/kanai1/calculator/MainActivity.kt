@@ -9,79 +9,64 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityMainBinding
 
+    fun errorToastShowandEditResult(binding: ActivityMainBinding, msg: String){
+        Toast.makeText(
+            this,
+            msg,
+            Toast.LENGTH_SHORT
+        ).show()
+        binding.activityMainTvResult.text = "Result: -"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonAdd.setOnClickListener{
-            if(binding.input1.text.toString() == "" || binding.input2.text.toString() == "") {
-                Toast.makeText(
-                    this,
-                    "숫자가 비어있습니다",
-                    Toast.LENGTH_SHORT
-                ).show()
+        binding.activityMainBtnAdd.setOnClickListener{
+            if(binding.activityMainEtNum1.text.toString().isEmpty() || binding.activityMainEtNum2.text.toString().isEmpty()) {
+                errorToastShowandEditResult(binding, "숫자가 비어있습니다.")
             } else {
-                var num1 = Integer.parseInt(binding.input1.text.toString())
-                var num2 = Integer.parseInt(binding.input2.text.toString())
+                var num1 = Integer.parseInt(binding.activityMainEtNum1.text.toString())
+                var num2 = Integer.parseInt(binding.activityMainEtNum2.text.toString())
 
-                binding.result.text = "Result: ${num1 + num2}"
+                binding.activityMainTvResult.text = "Result: ${num1 + num2}"
             }
         }
 
-        binding.buttonMinus.setOnClickListener{
-            if(binding.input1.text.toString() == "" || binding.input2.text.toString() == "") {
-                Toast.makeText(
-                    this,
-                    "숫자가 비어있습니다",
-                    Toast.LENGTH_SHORT
-                ).show()
-                binding.result.text = "Result: -"
+        binding.activityMainBtnMinus.setOnClickListener{
+            if(binding.activityMainEtNum1.text.toString().isEmpty() || binding.activityMainEtNum2.text.toString().isEmpty()) {
+                errorToastShowandEditResult(binding, "숫자가 비어있습니다.")
             } else {
-                var num1 = Integer.parseInt(binding.input1.text.toString())
-                var num2 = Integer.parseInt(binding.input2.text.toString())
+                var num1 = Integer.parseInt(binding.activityMainEtNum1.text.toString())
+                var num2 = Integer.parseInt(binding.activityMainEtNum2.text.toString())
 
-                binding.result.text = "Result: ${num1 - num2}"
+                binding.activityMainTvResult.text = "Result: ${num1 - num2}"
             }
         }
 
-        binding.buttonMultiply.setOnClickListener{
-            if(binding.input1.text.toString() == "" || binding.input2.text.toString() == "") {
-                Toast.makeText(
-                    this,
-                    "숫자가 비어있습니다",
-                    Toast.LENGTH_SHORT
-                ).show()
-                binding.result.text = "Result: -"
+        binding.activityMainBtnMultiply.setOnClickListener{
+            if(binding.activityMainEtNum1.text.toString().isEmpty() || binding.activityMainEtNum2.text.toString().isEmpty()) {
+                errorToastShowandEditResult(binding, "숫자가 비어있습니다.")
             } else {
-                var num1 = Integer.parseInt(binding.input1.text.toString())
-                var num2 = Integer.parseInt(binding.input2.text.toString())
+                var num1 = Integer.parseInt(binding.activityMainEtNum1.text.toString())
+                var num2 = Integer.parseInt(binding.activityMainEtNum2.text.toString())
 
-                binding.result.text = "Result: ${num1 * num2}"
+                binding.activityMainTvResult.text = "Result: ${num1 * num2}"
             }
         }
 
-        binding.buttonDiv.setOnClickListener{
-            if(binding.input1.text.toString() == "" || binding.input2.text.toString() == "") {
-                Toast.makeText(
-                    this,
-                    "숫자가 비어있습니다",
-                    Toast.LENGTH_SHORT
-                ).show()
-                binding.result.text = "Result: -"
+        binding.activityMainBtnDiv.setOnClickListener{
+            if(binding.activityMainEtNum1.text.toString() == "" || binding.activityMainEtNum2.text.toString() == "") {
+                errorToastShowandEditResult(binding, "숫자가 비어있습니다.")
             } else {
-                var num1 = Integer.parseInt(binding.input1.text.toString())
-                var num2 = Integer.parseInt(binding.input2.text.toString())
+                var num1 = Integer.parseInt(binding.activityMainEtNum1.text.toString())
+                var num2 = Integer.parseInt(binding.activityMainEtNum2.text.toString())
 
                 if(num2 == 0) {
-                    Toast.makeText(
-                        this,
-                        "Cannot Div in 0",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    binding.result.text = "Result: -"
+                    errorToastShowandEditResult(binding, "Cannot Div in 0.")
                 } else {
-                    binding.result.text = "Result: ${num1 / num2}"
+                    binding.activityMainTvResult.text = "Result: ${num1 / num2}"
                 }
             }
         }

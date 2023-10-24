@@ -12,85 +12,86 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/activity_main_tvNum1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="숫자1: "
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/activity_main_tvNum2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="숫자2: "
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_tvNum1"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_tvNum1"
         android:layout_marginTop="25dp"/>
 
     <EditText
-        android:id="@+id/input1"
+        android:id="@+id/activity_main_etNum1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
         android:hint="두번째 숫자를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/activity_main_tvNum1"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_tvNum1" />
 
     <EditText
-        android:id="@+id/input2"
+        android:id="@+id/activity_main_etNum2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
         android:hint="두번째 숫자를 입력해주세요"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/activity_main_tvNum2"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_tvNum2" />
 
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/activity_main_btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
+        app:layout_constraintEnd_toStartOf="@+id/activity_main_btnMinus"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input2"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_etNum2"
         android:layout_marginTop="30dp"/>
 
     <Button
-        android:id="@+id/buttonMinus"
+        android:id="@+id/activity_main_btnMinus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Minus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
-        app:layout_constraintTop_toTopOf="@+id/buttonAdd" />
+        app:layout_constraintStart_toEndOf="@+id/activity_main_btnAdd"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_btnAdd" />
 
     <Button
-        android:id="@+id/buttonMultiply"
+        android:id="@+id/activity_main_btnMultiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Multiply"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
+        app:layout_constraintEnd_toStartOf="@+id/activity_main_btnMinus"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_btnAdd"
         android:layout_marginTop="30dp"/>
 
     <Button
-        android:id="@+id/buttonDiv"
+        android:id="@+id/activity_main_btnDiv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Div"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
-        app:layout_constraintTop_toTopOf="@+id/buttonMultiply" />
+        app:layout_constraintStart_toEndOf="@+id/activity_main_btnAdd"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_btnMultiply" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/activity_main_tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
