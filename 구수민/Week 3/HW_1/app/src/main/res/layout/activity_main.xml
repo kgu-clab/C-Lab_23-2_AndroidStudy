@@ -58,7 +58,6 @@
         android:hint="비밀번호를 입력해주세요"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titlePassword" />
 
@@ -79,7 +78,6 @@
         android:hint="닉네임을 입력해주세요"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleNickname" />
 
@@ -100,7 +98,6 @@
         android:hint="MBTI를 입력해주세요"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleMBTI" />
 
@@ -121,7 +118,6 @@
         android:hint="한줄 자기소개를 입력해주세요"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleAboutMe" />
 

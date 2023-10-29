@@ -1,31 +1,28 @@
 package com.tnals.calculator
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
+import com.tnals.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    @SuppressLint("SetTextI18n")
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val numInput1 = findViewById<EditText>(R.id.inputNum1)
-        val numInput2 = findViewById<EditText>(R.id.inputNum2)
-        val plusButton = findViewById<Button>(R.id.plusButton)
-        val minusButton = findViewById<Button>(R.id.minusButton)
-        val multiplyButton = findViewById<Button>(R.id.multiplyButton)
-        val divideButton = findViewById<Button>(R.id.divideButton)
-        val result = findViewById<TextView>(R.id.result)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         fun sumNum(operator: String): String {
-            val num1 = numInput1.text.toString().toInt()
-            val num2 = numInput2.text.toString().toInt()
+            val num1: Int
+            val num2: Int
+
+            try {
+                num1 = binding.inputNum1.text.toString().toInt()
+                num2 = binding.inputNum2.text.toString().toInt()
+            } catch (ex: NumberFormatException) {
+                return "Error"
+            }
+
             when (operator) {
                 "+" -> return (num1 + num2).toString()
                 "-" -> return (num1 - num2).toString()
@@ -40,26 +37,27 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        plusButton.setOnClickListener {
+
+        binding.plusButton.setOnClickListener {
             val sum = sumNum("+")
-            result.text = "Result : $sum"
+            binding.result.text = getString(R.string.result, sum)
         }
 
-        minusButton.setOnClickListener {
+        binding.minusButton.setOnClickListener {
             val sum = sumNum("-")
-            result.text = "Result : $sum"
+            binding.result.text = getString(R.string.result, sum)
         }
 
-        multiplyButton.setOnClickListener {
+        binding.multiplyButton.setOnClickListener {
             val sum = sumNum("*")
-            result.text = "Result : $sum"
+            binding.result.text = getString(R.string.result, sum)
         }
 
-        divideButton.setOnClickListener {
+        binding.divideButton.setOnClickListener {
             val sum = sumNum("/")
-            result.text = "Result : $sum"
-            if(sum == "-"){
-                val errormessage ="0으로 나눌 수 없습니다."
+            binding.result.text = getString(R.string.result, sum)
+            if (sum == "-") {
+                val errormessage = "0으로 나눌 수 없습니다."
                 Toast.makeText(
                     this,
                     errormessage,
