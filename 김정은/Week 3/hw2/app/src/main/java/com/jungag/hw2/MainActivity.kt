@@ -14,43 +14,43 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.button1.setOnClickListener(View.OnClickListener {
-            val num1 = binding.num1.text.toString()
-            val num2 = binding.num2.text.toString()
-            if (num1.isNotEmpty() && num2.isNotEmpty()) {
+        binding.activityMainBtnAdd.setOnClickListener(View.OnClickListener {
+            val num1 = binding.activityMainEtNum1.text.toString()
+            val num2 = binding.activityMainEtNum2.text.toString()
+            if (!num1.isNullOrBlank() && !num2.isNullOrBlank()) {
                 val result = (num1.toInt() + num2.toInt()).toString()
-                binding.result.text = result
+                binding.activityMainTvResult.text = result
             }
         })
 
-        binding.button2.setOnClickListener(View.OnClickListener {
-            val num1 = binding.num1.text.toString()
-            val num2 = binding.num2.text.toString()
-            if (num1.isNotEmpty() && num2.isNotEmpty()) {
+        binding.activityMainBtnMin.setOnClickListener(View.OnClickListener {
+            val num1 = binding.activityMainEtNum1.text.toString()
+            val num2 = binding.activityMainEtNum2.text.toString()
+            if (!num1.isNullOrBlank() && !num2.isNullOrBlank()) {
                 val result = (num1.toInt() - num2.toInt()).toString()
-                binding.result.text = result
+                binding.activityMainTvResult.text = result
             }
         })
 
-        binding.button3.setOnClickListener(View.OnClickListener {
-            val num1 = binding.num1.text.toString()
-            val num2 = binding.num2.text.toString()
-            if (num1.isNotEmpty() && num2.isNotEmpty()) {
+        binding.activityMainBtnMul.setOnClickListener(View.OnClickListener {
+            val num1 = binding.activityMainEtNum1.text.toString()
+            val num2 = binding.activityMainEtNum2.text.toString()
+            if (!num1.isNullOrBlank() && !num2.isNullOrBlank()) {
                 val result = (num1.toInt() * num2.toInt()).toString()
-                binding.result.text = result
+                binding.activityMainTvResult.text = result
             }
         })
 
-        binding.button4.setOnClickListener(View.OnClickListener {
-            val num1 = binding.num1.text.toString()
-            val num2 = binding.num2.text.toString()
-            if (num1.isNotEmpty() && num2.isNotEmpty()) {
+        binding.activityMainBtnDiv.setOnClickListener(View.OnClickListener {
+            val num1 = binding.activityMainEtNum1.text.toString()
+            val num2 = binding.activityMainEtNum2.text.toString()
+            if (!num1.isNullOrBlank() && !num2.isNullOrBlank()) {
                 if (num2.toInt() == 0) {
-                    binding.result.text = "-"
+                    binding.activityMainTvResult.text = "-"
                     Toast.makeText(this, "0으로 나눌 수 없습니다.", Toast.LENGTH_SHORT).show()
                 } else {
                     val result = (num1.toInt() / num2.toInt()).toString()
-                    binding.result.text = result
+                    binding.activityMainTvResult.text = result
                 }
             }
         })

@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/num1"
+        android:id="@+id/activity_main_etNum1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/num2"
+        android:id="@+id/activity_main_etNum2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="500dp"
@@ -33,62 +33,60 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/num1"
-        app:layout_constraintTop_toBottomOf="@+id/num1" />
+        app:layout_constraintStart_toStartOf="@id/activity_main_etNum1"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_etNum1" />
 
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/activity_main_btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/num2"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_etNum2"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/activity_main_btnMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="-"
-        app:layout_constraintEnd_toEndOf="@+id/button1"
-        app:layout_constraintStart_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintEnd_toEndOf="@id/activity_main_btnAdd"
+        app:layout_constraintStart_toStartOf="@id/activity_main_btnAdd"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_btnAdd" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/activity_main_btnMul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="*"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintEnd_toEndOf="@id/activity_main_btnMin"
+        app:layout_constraintStart_toStartOf="@id/activity_main_btnMin"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_btnMin" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/activity_main_btnDiv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="/"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_btnMul"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toStartOf="@id/activity_main_btnMul"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_btnMul" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/activity_main_tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_btnDiv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
