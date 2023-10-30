@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editFirstNumber"
+        android:id="@+id/activiy_main_etFirstNumber"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="0dp"
@@ -20,17 +20,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editSecondNumber"
+        android:id="@+id/activiy_main_etSecondNumber"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editFirstNumber" />
+        app:layout_constraintTop_toBottomOf="@id/activiy_main_etFirstNumber" />
 
     <Button
-        android:id="@+id/plusButton"
+        android:id="@+id/activity_main_bunPlus"
         android:layout_width="90dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -38,10 +38,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editSecondNumber" />
+        app:layout_constraintTop_toBottomOf="@id/activiy_main_etSecondNumber" />
 
     <Button
-        android:id="@+id/minusButton"
+        android:id="@+id/activity_main_bunMinus"
         android:layout_width="90dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
@@ -49,10 +49,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plusButton" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_bunPlus" />
 
     <Button
-        android:id="@+id/multiplyButton"
+        android:id="@+id/activity_main_bunMul"
         android:layout_width="90dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
@@ -60,10 +60,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minusButton" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_bunMinus" />
 
     <Button
-        android:id="@+id/divideButton"
+        android:id="@+id/activity_main_bunDiv"
         android:layout_width="90dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
@@ -71,10 +71,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/multiplyButton" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_bunMul" />
 
     <TextView
-        android:id="@+id/resultText"
+        android:id="@+id/activity_main_etResult"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginTop="80dp"
@@ -83,6 +83,6 @@
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divideButton" />
+        app:layout_constraintTop_toBottomOf="@id/activity_main_bunDiv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
