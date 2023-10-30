@@ -6,7 +6,7 @@ import android.widget.Toast
 import com.mariojung.myapplication.databinding.CalculatorBinding
 
 class Calculator : AppCompatActivity() {
-    private lateinit var binding: CalculatorBinding
+    private lateinit var binding: CalculatorBinding //안녕하세요
     override fun onCreate(savedInstanceState: Bundle?) { //어노테이션 수정(삭제함)
         super.onCreate(savedInstanceState)
         binding = CalculatorBinding.inflate(layoutInflater)
