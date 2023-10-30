@@ -2,70 +2,53 @@ package com.jiyoxn.calhw
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.jiyoxn.calhw.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var input1: EditText
-    private lateinit var input2: EditText
-    private lateinit var resultText: TextView
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        input1 = findViewById(R.id.num1)
-        input2 = findViewById(R.id.num2)
-        resultText = findViewById(R.id.result)
+        binding.num1.inputType = android.text.InputType.TYPE_CLASS_NUMBER
+        binding.num2.inputType = android.text.InputType.TYPE_CLASS_NUMBER
 
-        input1.inputType = android.text.InputType.TYPE_CLASS_NUMBER
-        input2.inputType = android.text.InputType.TYPE_CLASS_NUMBER
-
-        val addB = findViewById<Button>(R.id.add)
-        val subB = findViewById<Button>(R.id.sub)
-        val mulB = findViewById<Button>(R.id.mul)
-        val divB = findViewById<Button>(R.id.div)
-
-        addB.setOnClickListener { performOperation("add") }
-        subB.setOnClickListener { performOperation("sub") }
-        mulB.setOnClickListener { performOperation("mul") }
-        divB.setOnClickListener { performOperation("div") }
+        binding.add.setOnClickListener { performOperation("add") }
+        binding.sub.setOnClickListener { performOperation("sub") }
+        binding.mul.setOnClickListener { performOperation("mul") }
+        binding.div.setOnClickListener { performOperation("div") }
     }
 
     private fun performOperation(operation: String) {
-        val num1Str = input1.text.toString()
-        val num2Str = input2.text.toString()
+        val input1 = binding.num1.text.toString()
+        val input2 = binding.num2.text.toString()
 
-            val num1 = num1Str.toInt()
-            val num2 = num2Str.toInt()
-            var result = 0
+        val num1 = input1.toInt()
+        val num2 = input2.toInt()
+        var result = 0
 
-            when (operation) {
-                "add" -> result = num1 + num2
-                "sub" -> result = num1 - num2
-                "mul" -> result = num1 * num2
-                "div" -> {
-                    if (num2 != 0) {
-                        result = num1 / num2
-                    } else {
-                        showToast("0으로 나눌 수 없습니다")
-                        resultText.text="result: - "
-                        return
-                    }
+        when (operation) {
+            "add" -> result = num1 + num2
+            "sub" -> result = num1 - num2
+            "mul" -> result = num1 * num2
+            "div" -> {
+                if (num2 == 0) {
+                    showToast("0으로 나눌 수 없습니다")
+                    binding.result.text = "result: - "
+                    return
                 }
+                result = num1 / num2
             }
-
-            resultText.text = "result: $result"
-
+        }
+        binding.result.text = "result: $result"
     }
 
     private fun showToast(message: String) {
-        Toast.makeText(
-            this,
-            message,
-            Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
