@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <EditText
+        android:id="@+id/editTextTextFirst"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="첫번째 숫자를 입력하세요."
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextSec"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="두번째 숫자를 입력하세요."
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextFirst"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextFirst"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextFirst" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="+"
+
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextSec"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextSec"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextSec" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPlus"
+        app:layout_constraintStart_toStartOf="@+id/buttonPlus"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+
+    <Button
+        android:id="@+id/buttonMulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="*"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMinus"
+        app:layout_constraintStart_toStartOf="@+id/buttonMinus"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMulty"
+        app:layout_constraintStart_toStartOf="@+id/buttonMulty"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMulty" />
+
+    <TextView
+        android:id="@+id/resultPoint"
+        android:layout_width="254dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="104dp"
+        android:text="이곳에 Result"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
