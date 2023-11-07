@@ -14,18 +14,20 @@ class LoginActivity : AppCompatActivity() {
     private var userinfo: userInfoClass? = null
     private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         userinfo = it.data?.getSerializableExtra("userInfo", userInfoClass::class.java)
-        if (userinfo != null) {
-            setID(userinfo!!.id)
-            setPassword(userinfo!!.password)
-        }
+        setID(userinfo?.id)
+        setPassword(userinfo?.password)
+        /*
+        위에 널처리를 한 다음에 블럭으로 코드를 작성했는데도 오류가 나서 !!연산자를 사용했던거에요.
+        null이 들어와도 처리가능한 함수로 변경했습니다!
+         */
     }
 
-    fun setID(id: String) {
-        binding.activityLoginEtID.setText(id)
+    fun setID(id: String?) {
+        binding.activityLoginEtID.setText(id?:"")
     }
 
-    fun setPassword(password: String) {
-        binding.activityLoginEtPassword.setText(password)
+    fun setPassword(password: String?) {
+        binding.activityLoginEtPassword.setText(password?:"")
     }
 
     fun showToast(msg: String) {
@@ -42,8 +44,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.activityLoginTvSignup.setOnClickListener{
-            println("signupbtn Pushed")
-
             val signupIntent = Intent(this, SignupActivity::class.java)
             resultLauncher.launch(signupIntent)
         }

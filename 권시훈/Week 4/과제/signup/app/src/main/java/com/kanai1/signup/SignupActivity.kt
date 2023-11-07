@@ -26,7 +26,8 @@ class SignupActivity : AppCompatActivity() {
 
     fun getMBTI(): String? {
         var MBTI = binding.activitySignupEtMBTI.text.toString()
-        return if(MBTI.length == 4 || MBTI.none { it !in 'A'..'Z' && it !in 'a'..'z' }) MBTI else null
+        return if(MBTI.length == 4 && MBTI.none { it !in 'A'..'Z' && it !in 'a'..'z' }) MBTI else null
+        /*왜 ||으로 썼는지 모르겠네요 ㅋㅋ 수정했습니다.*/
     }
 
     fun getAboutMe(): String? {
@@ -55,22 +56,24 @@ class SignupActivity : AppCompatActivity() {
             var MBTI = getMBTI()
             var AboutMe = getAboutMe()
 
-            if(id == null) showErrorToast("id는 6~8자의 영문 및 숫자를 이용해주세요")
-            else if(password == null) showErrorToast("password는 8~12자의 영문 및 숫자를 이용해주세요")
-            else if(name == null) showErrorToast("이름은 공백을 제외하고 1자 이상을 이용해주세요")
-            else if(MBTI == null) showErrorToast("MBTI는 영문 4글자를 이용해주세요")
-            else if(AboutMe == null) showErrorToast("About Me는 공백제외 1자 이상을 이용해주세요")
-            else{
-                var userinfo = userInfoClass(id, password, name, MBTI, AboutMe)
-                val loginIntent = Intent(this, LoginActivity::class.java).apply{
-                    putExtra("userInfo", userinfo)
+            when(null) {
+                id -> showErrorToast("id는 6~8자의 영문 및 숫자를 이용해주세요")
+                password -> showErrorToast("password는 8~12자의 영문 및 숫자를 이용해주세요")
+                name -> showErrorToast("이름은 공백을 제외하고 1자 이상을 이용해주세요")
+                MBTI -> showErrorToast("MBTI는 영문 4글자를 이용해주세요")
+                AboutMe -> showErrorToast("About Me는 공백제외 1자 이상을 이용해주세요")
+                else -> {
+                    var userinfo = userInfoClass(id, password, name, MBTI, AboutMe)
+                    val loginIntent = Intent(this, LoginActivity::class.java).apply{
+                        putExtra("userInfo", userinfo)
+                    }
+                    setResult(RESULT_OK, loginIntent)
+                    if(!isFinishing) finish()
                 }
-
-                setResult(RESULT_OK, loginIntent)
-                if(!isFinishing) finish()
             }
-
-
+            /*
+            when을 이런식으로도 쓸수있을까를 처음에 생각하긴했는데 뭔가 안될거같아서 원래 쓰전 ifelse방식으로 처리했었습니다.
+             */
         }
     }
 }
