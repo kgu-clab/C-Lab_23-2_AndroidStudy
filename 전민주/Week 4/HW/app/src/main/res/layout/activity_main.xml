@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/activity_main_tvId"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="id"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_main_tvNickName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="nickname"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_tvId" />
+
+    <TextView
+        android:id="@+id/activity_main_tvMBTI"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="mbti"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_tvNickName" />
+
+    <TextView
+        android:id="@+id/activity_main_tvAboutMe"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="aboutMe"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_tvMBTI" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
