@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".JoinActivity">
 
     <TextView
         android:id="@+id/textView9"
@@ -11,11 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="ID"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText" />
+        app:layout_constraintBottom_toTopOf="@+id/editId"
+        app:layout_constraintStart_toStartOf="@+id/editId" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editId"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
@@ -45,52 +46,52 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="닉네임"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText7"
-        app:layout_constraintStart_toStartOf="@+id/editTextText7" />
+        app:layout_constraintBottom_toTopOf="@+id/editNick"
+        app:layout_constraintStart_toStartOf="@+id/editNick" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/editNick"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
         android:hint="닉네임을 입력해주세요"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintStart_toStartOf="@+id/editPwd"
+        app:layout_constraintTop_toBottomOf="@+id/editPwd" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/editPwd"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
         android:hint="비밀번호를 입력해주세요"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintStart_toStartOf="@+id/editId"
+        app:layout_constraintTop_toBottomOf="@+id/editId" />
 
     <EditText
-        android:id="@+id/editTextText8"
+        android:id="@+id/editMbti"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
         android:hint="MBTI를 입력해주세요"
-        app:layout_constraintStart_toStartOf="@+id/editTextText7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+        app:layout_constraintStart_toStartOf="@+id/editNick"
+        app:layout_constraintTop_toBottomOf="@+id/editNick" />
 
     <EditText
-        android:id="@+id/editTextText10"
+        android:id="@+id/editIntro"
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
         android:hint="한 줄 자기소개를 입력해주세요"
-        app:layout_constraintStart_toStartOf="@+id/editTextText8"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText8" />
+        app:layout_constraintStart_toStartOf="@+id/editMbti"
+        app:layout_constraintTop_toBottomOf="@+id/editMbti" />
 
     <TextView
         android:id="@+id/textView11"
@@ -98,8 +99,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="MBTI"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText8"
-        app:layout_constraintStart_toStartOf="@+id/editTextText8" />
+        app:layout_constraintBottom_toTopOf="@+id/editMbti"
+        app:layout_constraintStart_toStartOf="@+id/editMbti" />
 
     <TextView
         android:id="@+id/textView13"
@@ -107,8 +108,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="About Me"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText10"
-        app:layout_constraintStart_toStartOf="@+id/editTextText10" />
+        app:layout_constraintBottom_toTopOf="@+id/editIntro"
+        app:layout_constraintStart_toStartOf="@+id/editIntro" />
 
     <TextView
         android:id="@+id/textView14"
@@ -116,8 +117,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="비밀번호"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4" />
+        app:layout_constraintBottom_toTopOf="@+id/editPwd"
+        app:layout_constraintStart_toStartOf="@+id/editPwd" />
 
     <Button
         android:id="@+id/button3"
@@ -127,7 +128,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText10"
+        app:layout_constraintTop_toBottomOf="@+id/editIntro"
         app:layout_constraintVertical_bias="0.472" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
