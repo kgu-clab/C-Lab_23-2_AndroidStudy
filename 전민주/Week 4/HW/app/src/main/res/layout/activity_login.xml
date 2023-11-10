@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/activity_login_tvWelcome"
+        android:layout_width="364dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="Welcome to C-Lab"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_login_tvID"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:text="ID"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_tvWelcome" />
+
+    <EditText
+        android:id="@+id/activity_login_etID"
+        android:layout_width="346dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="아이디를 입력해주세요"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_tvID" />
+
+
+    <TextView
+        android:id="@+id/activity_login_tvPassword"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:gravity="start"
+        android:text="비밀번호"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_etID" />
+
+    <EditText
+        android:id="@+id/activity_login_etPassword"
+        android:layout_width="347dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="비밀번호를 입력해주세요"
+        android:width = "0dp"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_tvPassword" />
+
+
+    <Button
+        android:id="@+id/activity_login_btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="556dp"
+        android:text="로그인하기"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/activity_login_btnJoin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:text="회원가입하기"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_btnLogin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
