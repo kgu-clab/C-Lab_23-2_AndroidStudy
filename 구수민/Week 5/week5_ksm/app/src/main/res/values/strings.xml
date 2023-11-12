@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">week5_hw</string>
+    <string name="error_id">Error : ID must be 6 to 10 characters -> %d</string>
+    <string name="error_pw">Error : PW must be 6 to 10 characters -> %d</string>
+    <string name="error_name">Error : Nickname must be at least 1 character excluding spaces.</string>
+    <string name="error_mbti">Error : Incorrect mbti</string>
+    <string name="error_about">Error : AboutMe must be at least 1 character excluding spaces.</string>
+    <string name="id_is">ID : %s</string>
+    <string name="pw_is">Password : %s</string>
+    <string name="name_is">Nickname : %s</string>
+    <string name="mbti_is">MBTI : %s</string>
+    <string name="about_is">AboutMe : %s</string>
+</resources>
