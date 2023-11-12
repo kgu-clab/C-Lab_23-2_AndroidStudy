@@ -1,5 +1,6 @@
 package com.chattymin.week3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val intent = Intent(this, TestActivity::class.java)
 
         binding.button.setOnClickListener {
             val text = binding.editID.text.toString()
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
                 text,
                 Toast.LENGTH_SHORT
             ).show()
+
+            startActivity(intent)
         }
     }
 }
