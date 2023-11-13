@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/fragment_mypage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="my page"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="66dp" />
+    <TextView
+        android:id="@+id/fragment_mypage_tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_mypage_tvPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pw"
+        tools:layout_editor_absoluteY="22dp" />
+
+    <TextView
+        android:id="@+id/fragment_mypage_tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/fragment_mypage_tvMbti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mbti"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/fragment_mypage_tvIntroduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="me"
+        tools:layout_editor_absoluteY="106dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
