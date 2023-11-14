@@ -28,20 +28,18 @@ class MypageFragment: Fragment() {
         // 원두를 갈고~
         // 커피를 내리고~
 
-        val receivedId = arguments?.getString("receivedId")
-        val receivedPw = arguments?.getString("receivedPw")
-        val receivedName = arguments?.getString("receivedName")
-        val receivedMbti = arguments?.getString("receivedMbti")
-        val receivedIntroduce = arguments?.getString("receivedIntroduce")
+        var receivedId = arguments?.getString("receivedId")
+        var receivedPw = arguments?.getString("receivedPw")
+        var receivedName = arguments?.getString("receivedName")
+        var receivedMbti = arguments?.getString("receivedMbti")
+        var receivedMe = arguments?.getString("receivedMe")
 
-        binding.fragmentMypageTvId.text = "아이디: $receivedId"
-        binding.fragmentMypageTvPw.text = "비밀번호: $receivedPw"
-        binding.fragmentMypageTvName.text = "이름: $receivedName"
+        binding.fragmentMypageTvID.text = "ID: $receivedId"
+        binding.fragmentMypageTvPW.text = "PW: $receivedPw"
+        binding.fragmentMypageTvName.text = "Name: $receivedName"
         binding.fragmentMypageTvMbti.text = "MBTI: $receivedMbti"
-        binding.fragmentMypageTvIntroduce.text = "소개: $receivedIntroduce"
-
+        binding.fragmentMypageTvMe.text = "Me: $receivedMe"
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
