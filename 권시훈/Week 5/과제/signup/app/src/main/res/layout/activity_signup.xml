@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="60dp"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/activity_signup_tvSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_signup_tvID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        app:layout_constraintBottom_toTopOf="@+id/activity_signup_etID"
+        app:layout_constraintStart_toStartOf="@+id/activity_signup_etID" />
+
+    <EditText
+        android:id="@+id/activity_signup_etID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="아이디를 입력해주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_signup_tvSignup" />
+
+    <TextView
+        android:id="@+id/activity_signup_tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        app:layout_constraintBottom_toTopOf="@+id/activity_signup_etPassword"
+        app:layout_constraintStart_toStartOf="@+id/activity_signup_etPassword" />
+
+    <EditText
+        android:id="@+id/activity_signup_etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="비밀번호를 입력해주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_signup_etID" />
+
+    <TextView
+        android:id="@+id/activity_signup_tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        app:layout_constraintBottom_toTopOf="@+id/activity_signup_etName"
+        app:layout_constraintStart_toStartOf="@+id/activity_signup_etName" />
+
+    <EditText
+        android:id="@+id/activity_signup_etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="닉네임를 입력해주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_signup_etPassword" />
+
+    <TextView
+        android:id="@+id/activity_signup_tvMBTI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI"
+        app:layout_constraintBottom_toTopOf="@+id/activity_signup_etMBTI"
+        app:layout_constraintStart_toStartOf="@+id/activity_signup_etMBTI" />
+
+    <EditText
+        android:id="@+id/activity_signup_etMBTI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="MBTI를 입력해주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_signup_etName" />
+
+    <TextView
+        android:id="@+id/activity_signup_tvAboutMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Me"
+        app:layout_constraintBottom_toTopOf="@+id/activity_signup_etAboutMe"
+        app:layout_constraintStart_toStartOf="@+id/activity_signup_etAboutMe" />
+
+    <EditText
+        android:id="@+id/activity_signup_etAboutMe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="한줄 자기소개를 입력해주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_signup_etMBTI" />
+
+    <Button
+        android:id="@+id/activity_signup_btnSignup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="회원가입 하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
