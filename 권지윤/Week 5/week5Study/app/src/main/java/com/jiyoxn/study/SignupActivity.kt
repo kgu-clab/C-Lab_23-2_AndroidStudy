@@ -1,11 +1,11 @@
-package com.jiyoxn.hw
+package com.jiyoxn.study
 
 import android.content.Intent
 import android.content.LocusId
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.jiyoxn.hw.databinding.ActivitySignupBinding
+import com.jiyoxn.study.databinding.ActivitySignupBinding
 
 class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding
@@ -16,21 +16,20 @@ class SignupActivity : AppCompatActivity() {
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.SignUpBtn.setOnClickListener{
-            val id=binding.editID.text.toString()
-            val pw=binding.editPW.text.toString()
-            val name=binding.editName.text.toString()
-            val mbti=binding.editMBTI.text.toString()
-            val introduce=binding.editME.text.toString()
+        binding.activitySignupBtnSignup.setOnClickListener{
+            var id=binding.activitySignupEtID.text.toString()
+            var pw=binding.activitySignupEtPW.text.toString()
+            var name=binding.activitySignupEtName.text.toString()
+            var mbti=binding.activitySignupEtMBTI.text.toString()
+            var me =binding.activitySignupEtME.text.toString()
 
-            if(validInput(id,pw,name,mbti,introduce)) {
-                val intent = Intent(this, LoginActivity::class.java)
+            if(validInput(id,pw,name,mbti,me)) {
                 intent.putExtra("id",id)
                 intent.putExtra("pw",pw)
                 intent.putExtra("name",name)
                 intent.putExtra("mbti",mbti)
-                intent.putExtra("introduce",introduce)
-                startActivity(intent)
+                intent.putExtra("me",me)
+                setResult(RESULT_OK, intent)
                 finish()
             }
         }
@@ -47,7 +46,7 @@ class SignupActivity : AppCompatActivity() {
         }
         return true
     }
-    fun validInput(id:String, pw:String, name: String,mbti:String,introduce:String): Boolean {
+    fun validInput(id:String, pw:String, name: String,mbti:String,me:String): Boolean {
         if(id.length<5 || id.length>11){
             showToast("ID는 6~10 글자")
             return false
@@ -64,7 +63,7 @@ class SignupActivity : AppCompatActivity() {
             showToast("mbti는 알파벳 4글자")
             return false
         }
-        if (introduce.trim().length<1) {
+        if (me.trim().length<1) {
             showToast("자기소개는 공백 제외 한 글자 이상")
             return false
         }
