@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_message"
+        android:icon="@drawable/ic_message_white_24"
+        android:title="메세지" />
+
+    <item
+        android:id="@+id/menu_person"
+        android:icon="@drawable/ic_person_white_24"
+        android:title="사람" />
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home_white_24"
+        android:title="홈" />
+</menu>
