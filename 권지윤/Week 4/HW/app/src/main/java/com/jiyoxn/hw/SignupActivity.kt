@@ -31,6 +31,7 @@ class SignupActivity : AppCompatActivity() {
                 intent.putExtra("mbti",mbti)
                 intent.putExtra("introduce",introduce)
                 startActivity(intent)
+                finish()
             }
         }
     }

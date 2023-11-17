@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
         binding.signUpTextView.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         val receivedId = intent.getStringExtra("id")
@@ -43,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 intent.putExtra("mbti",receivedMbti)
                 intent.putExtra("introduce",receivedIntroduce)
                 startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
             }

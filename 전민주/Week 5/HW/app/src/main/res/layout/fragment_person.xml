@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Profile"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragement_person_tvId"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="id"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragement_person_tvNickName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="nickname"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/fragement_person_tvId" />
+
+    <TextView
+        android:id="@+id/fragement_person_tvMBTI"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="mbti"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/fragement_person_tvNickName" />
+
+    <TextView
+        android:id="@+id/fragement_person_tvAboutMe"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="aboutMe"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/fragement_person_tvMBTI" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
