@@ -23,6 +23,17 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        loginActivityResultLauncher()
+
+        binding.activityLoginTvSignup.setOnClickListener {
+            startSignUpActivity()
+        }
+
+        binding.activityLoginBtnLogin.setOnClickListener {
+            loginStart()
+        }
+    }
+    fun loginActivityResultLauncher(){
         activityResultLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == RESULT_OK) {
@@ -37,33 +48,31 @@ class LoginActivity : AppCompatActivity() {
                     binding.activityLoginEtPw.setText(receivedPw)
                 }
             }
+    }
+    fun startSignUpActivity(){
+        val signUpIntent = Intent(this, SignupActivity::class.java)
+        activityResultLauncher.launch(signUpIntent)
+    }
+    fun loginStart(){
+        val id = binding.activityLoginEtId.text.toString()
+        val pw = binding.activityLoginEtPw.text.toString()
 
-        binding.activityLoginTvSignup.setOnClickListener {
-            val signUpIntent = Intent(this, SignupActivity::class.java)
-            activityResultLauncher.launch(signUpIntent)
-        }
-
-        binding.activityLoginBtnLogin.setOnClickListener {
-            val id = binding.activityLoginEtId.text.toString()
-            val pw = binding.activityLoginEtPw.text.toString()
-
-            if (id == receivedId && pw == receivedPw) {
-                val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
-                    putExtra("id", receivedId)
-                    putExtra("pw", receivedPw)
-                    putExtra("name", receivedName)
-                    putExtra("mbti", receivedMbti)
-                    putExtra("me", receivedMe)
-                }
-
-                homeActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(homeActivityIntent)
-                finish()
-
-                Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+        if (id == receivedId && pw == receivedPw) {
+            val homeActivityIntent = Intent(this, HomeActivity::class.java).apply {
+                putExtra("id", receivedId)
+                putExtra("pw", receivedPw)
+                putExtra("name", receivedName)
+                putExtra("mbti", receivedMbti)
+                putExtra("me", receivedMe)
             }
+
+            homeActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(homeActivityIntent)
+            finish()
+
+            Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
         }
     }
 }

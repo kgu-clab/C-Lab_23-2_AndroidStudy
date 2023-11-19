@@ -34,11 +34,13 @@ class MypageFragment: Fragment() {
         var receivedMbti = arguments?.getString("receivedMbti")
         var receivedMe = arguments?.getString("receivedMe")
 
-        binding.fragmentMypageTvID.text = "ID: $receivedId"
-        binding.fragmentMypageTvPW.text = "PW: $receivedPw"
-        binding.fragmentMypageTvName.text = "Name: $receivedName"
-        binding.fragmentMypageTvMbti.text = "MBTI: $receivedMbti"
-        binding.fragmentMypageTvMe.text = "Me: $receivedMe"
+        with(binding){
+            fragmentMypageTvID.text = "ID: $receivedId"
+            fragmentMypageTvPW.text = "PW: $receivedPw"
+            fragmentMypageTvName.text = "Name: $receivedName"
+            fragmentMypageTvMbti.text = "MBTI: $receivedMbti"
+            fragmentMypageTvMe.text = "Me: $receivedMe"
+        }
     }
 
     override fun onDestroyView() {
