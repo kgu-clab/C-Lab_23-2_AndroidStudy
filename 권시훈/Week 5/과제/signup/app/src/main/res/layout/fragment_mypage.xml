@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MypageFragment">
+
+
+    <TextView
+        android:id="@+id/fragment_mypage_tv_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="ID"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/fragment_mypage_tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="Nickname"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/fragment_mypage_tv_MBTI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="MBTI"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/fragment_mypage_tv_AboutMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="About Me"
+        android:textSize="30dp"/>
+
+</FrameLayout>
