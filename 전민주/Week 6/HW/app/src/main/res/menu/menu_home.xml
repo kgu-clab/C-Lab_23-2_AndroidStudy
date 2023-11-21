@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_message"
+        android:icon="@drawable/ic_message_black_24"
+        android:title="message" />
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home_black_24"
+        android:title="main" />
+
+    <item
+        android:id="@+id/menu_person"
+        android:icon="@drawable/ic_person_white_24"
+        android:title="profile" />
+
+</menu>
